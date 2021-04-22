@@ -1,0 +1,49 @@
+.login {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    margin-top: 15vh;
+    display: flex;  
+    box-shadow: 0 0 10px 2px black; 
+    border-radius: 15px;
+}
+.login-left {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 100%;
+    border-radius: 15px 0 0 15px;
+}
+.login-right {
+    display: flex;
+    background-color: #fd5e5f;
+    width: 100%; 
+    border-radius: 0 15px 15px 0;
+}
+form {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-right h3 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+input {
+    background-color: lightgrey;
+    width : 300px;
+    height: 40px;
+    border: none;
+}
+#loginButton {
+    width : 120px;
+    height: 40px;
+    margin-left: 20%;
+    border-radius: 25px;
+    background-color: #fd5e5f;
+    border : none ;
+}
