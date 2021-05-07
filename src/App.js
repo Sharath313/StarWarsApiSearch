@@ -1,8 +1,10 @@
+import { ThemeProvider } from '@material-ui/styles';
 import React from 'react';
-import './App.css';
-import Dashboard from './components/Dashboard';
-import LogIn from './components/Login';
-import {Switch ,Route, BrowserRouter} from 'react-router-dom';
+import theme from './Components/Theme'
+import Header from './Components/Header';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import LandingPage from './Components/LandingPage';
+
 
 class App extends React.Component {
   constructor(props){
@@ -13,15 +15,21 @@ class App extends React.Component {
   }
   render() {
       return (
-        <div className="App">
-          <BrowserRouter >
+          <ThemeProvider theme={theme}> 
+          <BrowserRouter>
+            <Header />
             <Switch>
-              <Route exact path="/" component={LogIn} />
-              <Route exact path="/login" component={LogIn} />
-              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/services" component={()=> <div>services</div>} />
+              <Route exact path="/customsoftware" component={()=> <div>customsoftware</div>} />
+              <Route exact path="/mobileapps" component={()=> <div>mobileapps</div>} />
+              <Route exact path="/websites" component={()=> <div>websites</div>} />
+              <Route exact path="/revolution" component={()=> <div>revolution</div>} />
+              <Route exact path="/about" component={()=> <div>about</div>} />
+              <Route exact path="/contact" component={()=> <div>contact</div>} />
             </Switch>
           </BrowserRouter>
-        </div>
+          </ThemeProvider>
       );
   } 
 }
